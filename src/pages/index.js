@@ -6,7 +6,11 @@ import Section from '../components/section'
 import skillsIcon from '../components/skills-icon'
 import WorkEntry from '../components/work-entry'
 import WorkingIcon from '../components/working-icon'
-console.log(WorkingIcon)
+import StudentIcon from '../components/student-icon'
+import SuperheroIcon from '../components/superhero-icon'
+import LeadIcon from '../components/lead-icon'
+import RacerIcon from '../components/racer-icon'
+
 const SkillEntry = styled(({ skillHeading, children, className }) => (
   <li className={className}>
     {skillHeading ? <span className="skill-heading">{skillHeading} : </span> : null}
@@ -59,14 +63,17 @@ const IndexPage = () => (
       </ul>
     </Section>
     <Section sectionHeader="Work Experience" sectionIcon={briefcase}>
-      <WorkEntry company="Walmart" start="2016-05">
+      <WorkEntry company="Walmart" start="2016-05" title="Senior Engineer Development"
+        trackIcon={WorkingIcon}>
+
         <p>I am currently involved in building an in-house forecasting application which can handle the volume of one of the largest retailers. I am extensively involved in developing the UI, collaborating on APIs which are secured by gateways, and setting up deployment pipelines with CI/CD and regression. The application is extensively developed with micro-services and the UI application, developed in React.js, is powered by a Node.js backend which handles authentication, authorization, orchestration of API calls.</p>
         <p>I have worked on building the frontend of a self-service application which enables an end user to move data from various sources. This application was built using micro-services, and the frontend was served through a Node server which acts as an orchestrator between these services.</p>
         <p>I worked in the Analytics division of Walmart labs architecting the UI application architecture and the overall engineering architecture for a BI application that allows to build custom dashboards for various applications. I have worked on building application which help the business make decisions that impact the overall revenue of the company across different geographies and markets. Some of the applications I have built are Demand forecasting utility, Campaign Performance Monitoring, 360-degree customer profile. Apart from this, I am a founding member of the UI Community for Walmart, primarily being responsible for talent engagement and development and building proof-of-concept applications.</p>
         <p>I was involved in building an application which allows for profiling of unique customers and to measure their engagement with the various businesses of Walmart.
         Most applications had their frontend built were a mix of Angular.js (1.x), React, D3.js and served using Node.js.</p>
       </WorkEntry>
-      <WorkEntry company="Snapwiz" start="2015-02" end="2016-05">
+      <WorkEntry company="Snapwiz" start="2015-02" end="2016-05" title="UI Lead"
+        trackIcon={LeadIcon} trackIconStyling={{ style: { right: '-130px' } }}>
         <p>
           I was leading a team of enthusiastic developers in architecting and building an application christened as Glider(<a href="www.glider.ai">www.glider.ai</a>). Glider is an application which aims to ease and improve the hiring of resources by AI driven recommendation of jobs to candidates. It also included complete candidate management, 2-way communication from recruiter to candidate from desktop to mobile, platform assessments and much more. It was built on a stack comprising of Meteor.js, Node.js, Mongo, Python etc. with a variety of services via REST and SOAP interfaces.
         </p>
@@ -78,7 +85,7 @@ const IndexPage = () => (
         </p>
 
       </WorkEntry>
-      <WorkEntry company="Tribune Digital Ventures" start="2013-12" end="2015-02">
+      <WorkEntry company="Tribune Digital Ventures" start="2013-12" end="2015-02" title="Senior UI Developer">
         <p>
           I was part of 5-member team that did an overhaul for the hugely outdated zap2it.com which was one of the flagship TV Listings medium for Tribune. The application was built on a FuelPHP framework with a YUI3 based frontend.
         </p>
@@ -87,7 +94,7 @@ const IndexPage = () => (
           I also implemented the search engine for the application which interfaced with articles, cast and crew for TV Shows and Movies using a Solr service. I was also responsible for developing and implementing a reusable framework to easily implement Test & Target, Google, Chartbeat and Nielsen analytics on the platform. This further allowed for a major monetization on the platform in sponsored and ad revenue.
         </p>
       </WorkEntry>
-      <WorkEntry company="Flipkart" start="2013-02" end="2013-11">
+      <WorkEntry company="Flipkart" start="2013-02" end="2013-11" title="UI Developer I" trackIcon={SuperheroIcon} trackIconStyling={{ style: { right: '-150px' } }} >
 
         <p>
           I was part of a 6-member team that built the onboarding platform for third party sellers on the e-commerce giant. The platform was a Node.js application with Backbone.js and Angular.js.
@@ -99,7 +106,14 @@ const IndexPage = () => (
           After the initial launch, I was tasked with identifying and resolving bottlenecks which were caused during festive and offer seasons. In course of this activity, I established various patterns and built a dashboard tool to help DevOps in helping sellers with orders that were stuck in the pipeline. This gave me an intricate understanding of the architecture of the e-commerce application.
         </p>
       </WorkEntry>
-      <WorkEntry company="Dell International Services" start="2012-04" end="2013-02">
+      <WorkEntry company="Dell International Services" start="2012-04" end="2013-02" title="Javascript Developer" trackIcon={RacerIcon} trackIconStyling={{
+        style: {
+          right: '-100px',
+          bottom: '-50px',
+          left: 'initial',
+          top: 'initial',
+          transform: 'rotate(35deg) scaleX(-1)',
+           } }}>
         <p>
           I was part of an international team that built A/B test campaigns that were deployed to the various Dell websites to measure and gauge customer engagement and conversion. We were working with Adobe’s Test and Target platform to build high performant scripts, that would be injected into a page’s DOM at runtime.
         </p>
@@ -107,7 +121,18 @@ const IndexPage = () => (
           We would be developing and delivering test scripts that would run under 100ms and ensure that the customer sees no aberrance. Many of my campaigns that catered to recommendations based on the visitor’s segment, recommendation during checkout and optimized navigation interfaces were later integrated into the web sites during the dev iterations due to positive engagement and conversion.
         </p>
       </WorkEntry>
-      <WorkEntry company="Wipro" start="2008-08" end="2012-04">
+      <WorkEntry company="Wipro" start="2008-08" end="2012-04" title="Project Engineer" trackIcon={StudentIcon}
+        trackIconStyling= {
+          {
+            style: {
+              left: '-100px',
+              right: 'initial',
+              bottom: '-20px',
+              top: 'initial'
+            }
+          }
+        }
+      >
         <p>
           I started my career as a frontend developer for Dish.com. I was involved in implementing mockups along with interaction using JavaScript and Flash. Apart from mock-conversion, I was involved in cross browser testing and fixing issues with UI across browsers.
         </p>
